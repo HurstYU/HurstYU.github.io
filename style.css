@@ -1,0 +1,317 @@
+/* ============================================================
+   Shared stylesheet for all pages.
+   Design: academic paper / preprint visual language.
+   ============================================================ */
+
+:root{
+  --ink: #1B2340;
+  --ink-soft: #4B5165;
+  --paper: #FAFAF7;
+  --line: #D9D4C6;
+  --accent: #7A2B2B;
+  --brass: #8C6E31;
+  --maxw: 700px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+a{ color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+a:hover{ border-bottom-color: var(--accent); }
+
+.wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Running head ---------- */
+.running-head{
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.running-head .wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+.running-head .mark{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+nav.toc{
+  display: flex;
+  gap: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  flex-wrap: wrap;
+}
+nav.toc a{ color: var(--ink); border-bottom: none; padding-bottom: 2px; }
+nav.toc a:hover{ color: var(--accent); }
+nav.toc a.active{
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* ---------- Title block (home page) ---------- */
+.title-block{ padding: 56px 0 40px; }
+.title-block h1{
+  font-weight: 600;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  margin: 0 0 8px;
+  letter-spacing: 0.01em;
+}
+.title-block .affiliation{
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  margin: 0 0 20px;
+}
+.contact-row{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+.contact-row span.sep{ color: var(--line); }
+
+/* ---------- Abstract box ---------- */
+.abstract{
+  margin: 40px 0 0;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  background: rgba(122,43,43,0.02);
+}
+.abstract .label{
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.abstract p{ margin: 0; color: var(--ink-soft); }
+
+/* ---------- Generic page header (non-home pages) ---------- */
+.page-header{ padding: 48px 0 8px; }
+
+/* ---------- Sections ---------- */
+main section{
+  padding: 40px 0 48px;
+}
+
+.sec-head{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.sec-head .sign{
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--brass);
+  font-size: 0.95rem;
+}
+.sec-head h2, .sec-head h1{
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* ---------- Contents list (home page) ---------- */
+.contents-list{ list-style: none; margin: 0; padding: 0; }
+.contents-list li{
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--line);
+  align-items: flex-start;
+}
+.contents-list li:last-child{ border-bottom: none; }
+.contents-list .num{
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--brass);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  width: 34px;
+}
+.contents-list .entry{ flex: 1; }
+.contents-list h3{ margin: 0 0 4px; font-weight: 600; font-size: 1.1rem; }
+.contents-list p{ margin: 0 0 8px; color: var(--ink-soft); font-size: 0.94rem; }
+.contents-list a.goto{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+}
+
+/* ---------- Research tags ---------- */
+.tag-list{ display: flex; flex-wrap: wrap; gap: 10px; }
+.tag-list span{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+/* ---------- Publications ---------- */
+.pub-list{ list-style: none; margin: 0; padding: 0; }
+.pub-list li{
+  display: flex;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.pub-list li:last-child{ border-bottom: none; }
+.pub-list .cite-no{
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--brass);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.pub-list .cite-body p{ margin: 0 0 8px; color: var(--ink-soft); }
+.pub-links{ font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; display: flex; gap: 14px; }
+
+/* ---------- Teaching ---------- */
+.teach-list{ list-style: none; margin: 0; padding: 0; }
+.teach-list li{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.teach-list li:last-child{ border-bottom: none; }
+.teach-list .code{ font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--brass); white-space: nowrap; }
+.teach-list .term{ font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--ink-soft); white-space: nowrap; }
+
+/* ---------- Music ---------- */
+.track-card{
+  display: flex;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.track-card:last-child{ border-bottom: none; }
+.cover-placeholder{
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border: 1px dashed var(--line);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  padding: 8px;
+  position: relative;
+}
+.cover-placeholder::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.track-card img.cover{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+.track-meta h3{ margin: 0 0 4px; font-size: 1.25rem; }
+.track-meta .artist{ font-style: italic; color: var(--ink-soft); margin: 0 0 12px; }
+.track-tag{
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  color: var(--brass);
+  margin-bottom: 12px;
+}
+.track-link{ font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; display: block; }
+
+/* ---------- Contact ---------- */
+.contact-body p{ color: var(--ink-soft); max-width: 50ch; }
+.contact-body .links{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 16px;
+}
+
+/* ---------- Pager (prev/next between pages) ---------- */
+.pager{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--line);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+}
+.pager .placeholder-side{ visibility: hidden; }
+
+/* ---------- Footer ---------- */
+footer.colophon{
+  padding: 26px 0 44px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{ opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-visible{ opacity: 1; transform: none; }
+
+/* ---------- Accessibility ---------- */
+a:focus-visible, button:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+  .reveal{ opacity: 1; transform: none; }
+}
+
+@media (max-width: 600px){
+  body{ font-size: 17px; }
+  .title-block{ padding: 40px 0 32px; }
+  main section{ padding: 32px 0 40px; }
+  .pub-list li{ flex-direction: column; gap: 8px; }
+  .teach-list li{ flex-direction: column; gap: 4px; }
+  .track-card{ flex-direction: column; }
+  .contents-list li{ flex-direction: column; }
+  .contents-list .num{ width: auto; }
+}

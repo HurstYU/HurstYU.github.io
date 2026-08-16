@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music — Your Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  ============================================================
+  HOW TO ADD YOUR OWN ALBUM COVERS
+  1. Save your album cover images into the "assets" folder,
+     e.g. assets/track-1.jpg
+  2. In each <div class="cover-placeholder">...</div> block below,
+     delete that div and replace it with:
+       <img class="cover" src="assets/track-1.jpg" alt="Album cover of [Song Title]">
+  ============================================================
+-->
+
+<header class="running-head">
+  <div class="wrap">
+    <span class="mark">Personal Academic Homepage</span>
+    <nav class="toc">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="reveal">
+    <div class="sec-head" style="padding-top:32px;">
+      <span class="sign">§4</span>
+      <h1>Music</h1>
+    </div>
+    <p style="color:var(--ink-soft);max-width:56ch;">Write a short line here about your relationship with music, or what these songs have in common for you.</p>
+
+    <div class="track-card" style="margin-top:24px;">
+      <div class="cover-placeholder">Album cover here — see comment at top of this file</div>
+      <div class="track-meta">
+        <h3>[Song Title]</h3>
+        <p class="artist">[Artist Name] — [Album Name]</p>
+        <span class="track-tag">Usually listening: [time period — e.g. late nights, morning commute]</span>
+        <a class="track-link" href="#">[Link to listen — Spotify / Apple Music / 网易云音乐]</a>
+      </div>
+    </div>
+
+    <div class="track-card">
+      <div class="cover-placeholder">Album cover here</div>
+      <div class="track-meta">
+        <h3>[Song Title]</h3>
+        <p class="artist">[Artist Name] — [Album Name]</p>
+        <span class="track-tag">Usually listening: [time period]</span>
+        <a class="track-link" href="#">[Link to listen]</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager">
+    <a href="teaching.html">← Teaching</a>
+    <a href="contact.html">Next: Contact →</a>
+  </nav>
+</main>
+
+<footer class="colophon">
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;width:100%;">
+    <span id="year-line">© 2026 Your Name</span>
+    <span id="compiled-line"></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
