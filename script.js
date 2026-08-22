@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   var yearLine = document.getElementById('year-line');
   if (yearLine) {
-    yearLine.textContent = '© ' + new Date().getFullYear() + ' Your Name';
+    yearLine.textContent = '© ' + new Date().getFullYear() + ' YU Huiquan';
   }
   var compiledLine = document.getElementById('compiled-line');
   if (compiledLine) {

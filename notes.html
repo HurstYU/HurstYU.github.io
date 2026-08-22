@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes — YU Huiquan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&family=Noto+Serif+SC:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<aside class="sidebar">
+  <div class="sidebar-brand">YU, Huiquan</div>
+
+  <nav class="side-nav">
+    <a class="nav-home" href="index.html">Home</a>
+
+    <div class="nav-group">
+      <div class="nav-group-title">Academic</div>
+      <a href="coursework.html">Coursework</a>
+      <a href="notes.html" class="active">Notes</a>
+      <a href="teaching.html">Teaching</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">Personal</div>
+      <a href="music.html">Music</a>
+      <a href="blogs.html">Blogs</a>
+    </div>
+  </nav>
+</aside>
+
+
+<div class="page-content">
+
+<main class="wrap">
+  <section class="reveal">
+    <div class="sec-head" style="padding-top:32px;">
+      <h1>Notes</h1>
+        <p class="section-intro">
+        While attending the International Honors Program at Stanford University during the summer session of 2026, 
+        I browsed many profiles and websites of Ph.D. students there. Many of them have been posting notes or blogs about what they were learning or what interested them since their undergraduate studies. 
+        I realized this is a good way to motivate me to synthesize knowledge and foster my academic writing ability. Therefore, I began doing similar things that summer.
+        </p>
+    </div>
+<div class="teach-list">
+
+<!--Diagonalization and Matrix Decomposition-->
+  <details class="course-card">
+
+    <summary class="course-summary note-summary">
+
+      <span class="course-title">
+        Diagonalization and Matrix Decomposition
+      </span>
+
+      <span class="term">
+        Aug 2026
+      </span>
+
+      <span class="expand-icon"></span>
+
+    </summary>
+
+    <div class="course-details">
+      <ul>
+
+        <li>
+          <strong>Areas:</strong>
+          Linear Algebra
+        </li>
+
+        <li>
+          I'm working with it recently
+        </li>
+
+
+      </ul>
+    </div>
+
+  </details>
+
+<!--Matrix Calculus for Machine Learning-->
+  <details class="course-card">
+
+    <summary class="course-summary note-summary">
+
+      <span class="course-title">
+        Matrix Calculus for Machine Learning — How to derive backpropagation elegantly
+      </span>
+
+      <span class="term">
+        Jul 2026
+      </span>
+
+      <span class="expand-icon"></span>
+
+    </summary>
+
+    <div class="course-details">
+      <ul>
+
+        <li>
+          <strong>Areas:</strong>
+          Neural Network, Linear Algebra, Calculus
+        </li>
+
+        <li>
+          <strong>Description:</strong>
+          I was confused by the chain rule formula for backpropagation presented in the CS229 instructor’s slides. 
+          The chain rule was written from right to left, which is quite different from the one I learned in Calculus. 
+          Given this confusion, I tried to verify the formula by hand using a very simple 2-layer neural network example. 
+          The formula holds, but I noticed that the computation was quite exhausting. 
+          I asked the AI Chatbot about the reverse order and the complicated verification process, which led me to the topic of Numerator & Denominator Layout and the Fréchet derivative. 
+          Days later, I encountered trouble computing the explicit expression of the gradient in terms of the parameter matrices, especially for the position of the transpose sign. 
+          I asked AI again and learned about the concept of matrix differential. I noticed that the matrix differential is closely related to the Riesz Representation Theorem I learned in MAT2042, 
+          and that the Fréchet derivative is based on a proof I encountered in a MAT1012 homework assignment. 
+          I synthesized the knowledge I gained in Calculus and Linear Algebra, along with some I gained from chatting with AI, 
+          to develop this note, which starts with basic, rigorous definitions and culminates in a practically useful method for computing gradients. 
+          I hope this note helps beginners in Machine Learning who have taken Calculus and Linear Algebra courses but are unfamiliar with Matrix Calculus.
+        </li>
+
+        <li>
+          <strong>View or download on:</strong>
+          <a href="https://github.com/HurstYU/Math-Notes/blob/main/Matrix%20Calculus%20for%20Machine%20Learning.pdf"
+           target="_blank">
+            GitHub
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </details>
+
+<!--Hessian and Strict Convexity-->
+  <details class="course-card">
+
+    <summary class="course-summary note-summary">
+
+      <span class="course-title">
+        Hessian and Strict Convexity
+      </span>
+
+      <span class="term">
+        Jun 2026
+      </span>
+
+      <span class="expand-icon"></span>
+
+    </summary>
+
+    <div class="course-details">
+      <ul>
+
+        <li>
+          <strong>Areas:</strong>
+          Convex Analysis, Calculus
+        </li>
+
+        <li>
+          <strong>Description:</strong>
+          This is the first note I’ve written. It is inspired by a question raised by a fellow student in an EE364a lecture. 
+          The question was “whether a function could still be strictly convex if its Hessian is zero at some points”. 
+          It reminded me of a lemma I encountered in Calculus, which states that “a function with one variable is strictly convex if its second-order derivative is positive except for a finite number of points.” 
+          I combined this lemma with the line restriction method I learned in Convex Optimization, and gave a better statement, “a function with multiple variables is strictly convex if its Hessian is positive definite except for a finite number of points. 
+          I lacked experience when I wrote this first note, so it may not look that professional (although my other notes are not that professional either).
+        </li>
+
+        <li>
+          <strong>View or download on:</strong>
+          <a href="https://github.com/HurstYU/Math-Notes/blob/main/Hessian_and_Convexity.pdf"
+           target="_blank">
+            GitHub
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </details>
+
+</div>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <div class="wrap footer-inner">
+    <span id="year-line">© 2026 YU Huiquan</span>
+    <span id="compiled-line"></span>
+  </div>
+</footer>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
